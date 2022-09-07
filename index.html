@@ -1,111 +1,133 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
+
+<head>
     <title>Anthony's Website</title>
     <style>
         body {
-            background: rgb(212, 251, 255);
-            color: rgb(0, 0, 0);
+            background: rgb(147, 171, 145);
+            color: rgb(91, 91, 91);
             padding: 10px;
             font-family: arial;
         }
+
         #all-contents {
-          max-width: 800px;
+            max-width: 800px;
             margin: auto;
         }
-     
+
         /* navigation menu */
         nav {
-            background: rgb(157, 157, 157);
-           margin: 0 auto;
-           margin-bottom: 20px;
+            border-radius: 30px;
+            background: rgb(165, 210, 166);
+            margin: 0 auto;
+            margin-bottom: 20px;
             display: flex;
             padding: 10px;
         }
+
         h1 {
             display: flex;
             align-items: center;
-            color: white;
+            color: rgb(81, 81, 81);
             flex: 1;
             margin: 0;
         }
+
         #nav-ul {
             list-style-image: none;
         }
+
         .nav-li {
             display: inline-block;
             padding: 0 10px;
         }
+
         a {
             text-decoration: none;
             color: #fff;
         }
-     
+
         /* main container area beneath menu */
         main {
-            background: rgb(255, 251, 239);
+            border-radius: 30px;
+            background: rgb(165, 210, 166);
             display: flex;
         }
+
         .sidebar {
             margin-right: 25px;
             padding: 10px;
         }
+
         .sidebar-img {
             width: 200px;
+            border-radius: 30px;
         }
+
         .content {
             flex: 1;
             padding: 15px;
         }
+
         #interests {
             border: 4px silver ridge;
             padding: 8px;
         }
-        h2, h3 {
+
+        h2,
+        h3 {
             margin: 0px;
         }
-     </style>
-    </head>
-    
-    <body>
-    <div> 
-        <nav>
-                <h1>Anthony's Website</h1>
-                <ul>
-                    <li>
-                      <a href="index.html"> Home </a>
-                    </li>
-                    <li>
-                      <a href="portfolio.html"> Portfolio </a>
-                    </li>
-                </ul>
-        </nav>
+    </style>
+</head>
 
-        <main>
-<!-- Sidebar section -->
-    <div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuk0J9ZCn47U6stmwHfck1Q-e9SlwBghCxjg:https://i2.wp.com/creapills.com/wp-content/uploads/2018/03/30-photos-absurdes-banques-dimages-23.jpg%3Fresize%3D800%252C536%26ssl%3D1&usqp=CAU">
-    </div>
 
-    <!-- Content section -->
-    <div class="content">
-        <h3>Interests</h3>
-        <ul>
-            <li>Food</li>
-            <li>Sleeping</li>
-            <li>Dogs</li>
-        </ul>
-    </div>
-        </main>
-    </div>
-          <h2>Anthony's Website</h2>
-       <p></p>
-       <!-- Interests section -->
-       <div id="Interests">
-    
-       </div>
-        
-       </div>
-   </div>
-    </body>
-</html>
+
+<body>
+    <div id="all-contents">
+
+        <body>
+            <!-- All content goes here -->
+            <div>
+                <nav>
+                    <h1>Anthony's Website</h1>
+                    <ul id="nav-ul">
+                        <li class="nav-li">
+                            <a href="index.html"> Home </a>
+                        </li>
+                        <li class="nav-li">
+                            <a href="portfolio.html"> Portfolio </a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <main>
+                    <!-- Sidebar section -->
+                    <div class="sidebar">
+                        <img class="sidebar-img"
+                            src="data:image/jpeg;base64,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">
+                    </div>
+
+
+                    <!-- Content Section-->
+                    <div class="content">
+                        <h2>Anthony Noto</h2>
+                        <p>Student at Hahnville High School</p>
+                        
+                        
+                        <!-- Interests section -->
+                        <div id="intrest">
+                            <div>
+                                <h3>Interests</h3>
+                                <ul>
+                                    <li>Sleeping</li>
+                                    <li>Eating</li>
+                                    <li>Dogs</li>
+                                </ul>
+                            </div>
+                        </div>    
+                </main>
+            </div>
+</body>
