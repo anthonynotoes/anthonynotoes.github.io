@@ -76,32 +76,34 @@
 			turn it around! 
 			*/
 			function update() {
-				moveBoxTo(positionX)
 				positionX = positionX + speed;
+				moveBoxTo(positionX)
+
 				if (positionX >= boardWidth) {
 					speed = -speed;
 				};
 				if (positionX < 0) {
-					speed = speed;
+					speed = -speed;
 				};
+			}
+			/* 
+			This Function will be called each time the box is clicked. Each time it is called,
+			it should increase the points total, increase the speed, and move the box to
+			the left side of the screen.
+			*/
+			function handleBoxClick() {
+				positionX = 0;
+				points = points + 1;
+				changeBoxText(points);
+				if (speed > 0) {
+					speed = speed + 3;
+				}
+				if (speed < 0) {
+					speed = speed - 3;
+				}
+			}
+		})();
 
-				/* 
-				This Function will be called each time the box is clicked. Each time it is called,
-				it should increase the points total, increase the speed, and move the box to
-				the left side of the screen.
-				*/
-				function handleBoxClick() {
-					positionX = 0;
-					points = points + 1;
-					changeBoxText(points);
-					if (speed > 0) {
-						speed = speed + 3;
-					}
-					else if (speed < 0) {
-						speed = speed - 3;
-					}
-				};
-			}) ();
 	</script>
 </body>
 
