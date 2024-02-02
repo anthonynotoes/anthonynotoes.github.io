@@ -78,7 +78,7 @@ dataShapes.push(shape)
 
 setBackgroundWithSimple(color, shape, repeat)
 
-animationDetails.displayType (2)
+animationDetails.displayType = 2
 
   }
 
@@ -96,22 +96,22 @@ animationDetails.displayType (2)
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    handleStatic(currentShape)
+    handleStatic(dataShapes[currentIndex])
   }
 
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
-var currentShape ,color, shape, repeat;
+    var currentShape = dataShapes[currentIndex];
     handleGood (currentShape.color, currentShape.shape, currentShape.repeat)
   }
 
   function badDisplay() {
     // TODO 5-b: call your handleBad function
-    var currentShape = currentShapes[currentIndex]
+    var currentShape = dataShapes[currentIndex]
     
     var repeat = currentShape.repeat
 
-    handleBad(currentShape, currentShape.repeat)
+    handleBad(currentShape, repeat)
   }
 
   /////////////////////////////////////////////////
