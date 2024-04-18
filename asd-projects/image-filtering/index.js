@@ -23,8 +23,8 @@ $(document).ready(function () {
  // all of your apply functions
  function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
- // applyFilter(reddify);
-  //applyFilter(decreaseBlue);
+   //applyFilter(reddify);
+  //applyFilter NoBackground(decreaseBlue);
   applyFilter(increaseGreenByBlue);
  
  
