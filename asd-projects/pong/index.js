@@ -26,7 +26,7 @@ function runProgram() {
     obj.speedX = speedX;
     obj.speedY = speedY;
     obj.maxSpeed = maxSpeed,
-    obj.positionX = positionX;
+      obj.positionX = positionX;
     obj.positionY = positionY;
     obj.height = height;
     obj.width = width;
@@ -37,7 +37,7 @@ function runProgram() {
   const ball = gameItems('#ball', 5, 5, 5, 735, 250, 30, 30);
   const paddleLeft = gameItems('#paddleLeft', 0, 0, 10, 15, 250, 150, 10);
   const paddleRight = gameItems('#paddleRight', 0, 0, 10, 1470, 250, 150, 10);
-  
+
 
   // game variables
   let P1SCORE = 0;
@@ -160,6 +160,9 @@ function runProgram() {
       ball.positionX = 735; //  starting position X
       ball.positionY = 250; // starting position Y
       ball.speedX = bounce * 5;
+      if (P2SCORE === 11) {
+        endGame(11)
+      }
     } else if (ball.positionX >= BORDER_RIGHT) {
       P1SCORE++;
       ball.positionX = 735; //  starting position X
@@ -169,6 +172,9 @@ function runProgram() {
       ball.speedY *= bounce;
     } else if (ball.positionY >= BORDER_BOTTOM - BALL_WIDTH) {
       ball.speedY *= bounce;
+    }
+    if (P1SCORE === 11) {
+      endGame(11)
     }
   }
 
